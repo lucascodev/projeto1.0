@@ -3,10 +3,17 @@
 	src: url("../fonts/OpenSans/OpenSans-Regular.ttf");
 	font-size: 1em;
 }
+@font-face {
+	font-family: 'OpenSans-Light';
+	src: url("../fonts/OpenSans/OpenSans-Light.ttf");
+	font-size: 1em;
+}
 header {
 	width: 100%;
 	height: 150px;
-	background-color: #5E299A;
+	background-color: rgba(94, 41, 154, .8);
+	z-index: 2;
+	position: relative;
 }
 header .container {
 	position: relative;
@@ -97,11 +104,13 @@ header #logotipo {
 	top: 20px;
 }
 #menu {
-	margin: 26px 0;
+	margin: 12px 0;
 }
 #menu li {
 	display: inline-block;
 	font-family: "OpenSans";
+	position: relative;
+    top: 24px;
 }
 #menu li.search {
 	width: 182px;
@@ -112,13 +121,52 @@ header #logotipo {
 	border: none;
 	height: 30px;
 	line-height: 30px;
+	padding-left: 8px;
 }
 #menu li.search ::-webkit-input-placeholder {
 	color: #fff;	
+}
+#menu li.search button {
+	background: none;
+	border: none;
+	position: absolute;
+    right: 3px;
+    top: 1px;
+}
+#menu li.search button i {
+	font-size: 14px;
+	color: rgba(255, 255, 255, .5);
 }
 #menu li a {
 	color: #FFF;
 	font-size: 16px;
 	padding: 10px 25px;
 	font-weight: bold;
+}
+#banner {
+	width: 100%;
+	height: 920px;
+	position: relative;
+	background-image: url("../img/banner.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0px -100px;
+	top: -180px;
+}
+#banner h1 {
+	color: #fff;
+	top: 300px;
+	position: relative;
+	font-size: 92px;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, .45);
+	font-family: 'OpenSans-Light';
+	margin-left: 50px;
+}
+#banner h1 small {
+	font-size: 32px;
+	display: block;
+	color: #fff;
+	font-family: 'OpenSans';
+	font-weight: bold;
+
 }
